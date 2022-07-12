@@ -1,0 +1,32 @@
+highlighter: rouge
+permalink: none
+kramdown:
+  input: GFM
+  hard_wrap: false
+repository: https://github.com/dshubham25/dshubham25.github.io
+plugins:
+  - jemoji
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /blog/:year/:month/:day/:title/
+google_analytics: "UA-40495390-2"
+title: Shubham
+description: Shubham's portfolio and writings on machine learning, data science and distributed systems.
+url: https://dshubham25.github.io/
+author: Shubham Dikshit
+twitter:
+  username: dshubham25
+logo: images/contents/NN.png
+social:
+  name: Shubham
+  links:
+    - https://twitter.com/ShubhamDikshit2
+    - https://www.linkedin.com/in/shubham-d-9696438a/
+    - https://github.com/dshubham25

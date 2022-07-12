@@ -1,0 +1,41 @@
+      </div><!-- #main -->
+
+      <div class="clear"></div>
+
+      <div id="fotterLinks">
+        <a href="https://www.linkedin.com/in/shubham-d-9696438a/" alt="LinkedIn" target="_blank" onclick="trackOutboundLink('http://www.linkedin.com/in/sbajaj9?loc=bottom');">LinkedIn</a>
+        |
+        <a href="https://github.com/dshubham25" alt="Github" target="_blank" onclick="trackOutboundLink('http://github.com/?loc=bottom');">Github</a>
+        |
+        <a href="https://twitter.com/ShubhamDikshit2" alt="Twitter" target="_blank" onclick="trackOutboundLink('http://twitter.com/?loc=bottom');">Twitter</a>
+        |
+        <a href="mailto:iamsds123@gmail.com" alt="email" target="_blank" onclick="trackOutboundLink('mailto:iamsds123@gmail.com');">Email</a>
+      </div>
+
+      <div id="copyright">
+        &copy; 2022–{{ 'now' | date: "%Y" }} <a href="https://dshubham25.github.io/">Shubham Dikshit</a>. All rights reserved.
+      </div>
+    </div><!-- .wrap -->
+  </div><!-- #container -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="/js/toc/toc.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.toc').toc({
+        title: '',
+        listType: 'ol',
+        minimumHeaders: 2,
+        headers: 'h2, h3, h4, h5, h6',
+        linkHere: true,
+        linkHereTitle: 'Link here',
+        backToTop: true,
+        backToTopId: 'toc',
+        backToTopTitle: 'Back to Table of Contents',
+      });
+      $('.jekyll-toc-header a.jekyll-toc-link-here span.jekyll-toc-icon').addClass('icon icon-link');
+      $('.jekyll-toc-header a.jekyll-toc-back-to-top span.jekyll-toc-icon').addClass('icon icon-chevron-up');
+    });
+  </script>
+</body>
+</html>
