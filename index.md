@@ -10,7 +10,6 @@ layout: default
 
     <div class="entry-summary">
       <p>I am Shubham, an uncomping engineer interested in machine learning, natural language processing, artificial intelligence and web development.</p>
-      <p>I have recently graduated from Dr. A.P.J. Abdul Kalam Technical University (Formely known as UPTU) and I have research experience from Delhi Technological University,National Dong Hwa University and from International Institute of Information Technology, Hyderabad
-      
+      <p>I have recently graduated from Dr. A.P.J. Abdul Kalam Technical University (Formely known as UPTU) and I have research experience from Delhi Technological University,National Dong Hwa University and from International Institute of Information Technology, Hyderabad.</p>
       <p>In my free time I try to learn something, contribute to open source and do cooking.</p>
     <hr />
