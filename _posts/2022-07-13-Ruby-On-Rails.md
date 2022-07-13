@@ -31,7 +31,7 @@ we can check on the webpage by typing **localhost:3000/home/index**
 now to change anything, we have to head back to the VSCode or Sublime text, and check the app folder, in which we have views folder, and then home folder.
 
 To change the URL *localhost:3000/home/index* to *localhost:3000*, we just have to have to change the route.
-1. To change the route go to config directory and look for routes.rb file and you will see
+To change the route go to config directory and look for routes.rb file and you will see
 ```rb
 Rails.application.routes.draw do
     get 'home/index'
