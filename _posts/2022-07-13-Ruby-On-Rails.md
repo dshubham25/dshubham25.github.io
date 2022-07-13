@@ -19,3 +19,33 @@ Rails are known as MVC Architecture-(Model View Controller).
 To write something for rails we need git bash terminal
 To create a webpage we need generator. 
  > rails g controller home index
+
+- '.erb' extension helps us to use embedded ruby on the html web pages.
+
+ > rails s
+*To start the server*
+
+now to check whether the server has started or not properly,
+we can check on the webpage by typing **localhost:3000/home/index**
+
+now to change anything, we have to head back to the VSCode or Sublime text, and check the app folder, in which we have views folder, and then home folder.
+
+To change the URL *localhost:3000/home/index* to *localhost:3000*, we just have to have to change the route.
+1. To change the route go to config directory and look for routes.rb file and you will see
+```rb
+Rails.application.routes.draw do
+    get 'home/index'
+end
+```
+
+change it to
+
+```rb
+Rails.application.routes.draw do
+    root 'home#index'
+end
+```
+
+To check all the routes, go to terminal
+ > rails routes
+
