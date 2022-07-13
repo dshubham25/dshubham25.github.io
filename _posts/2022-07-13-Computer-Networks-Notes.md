@@ -218,7 +218,7 @@ A three-way handshake includes the following steps:
 - After this procedure is completed, the client and server establish a connection through which they will begin the data transfer.
 
 <p align="center">
-    <img src="https://takeuforward.org/wp-content/uploads/2022/05/image-1.png" alt="3-way handshaking"/>
+    <img src="https://www.researchgate.net/profile/Roberto-Bifulco-2/publication/305081696/figure/fig2/AS:643173193879554@1530355847765/3-way-handshake-3-way-handshake-and-Proxy-Early-SYN-Forwarding.png" alt="3-way handshaking"/>
 </p>
 
 ### Socket Programming
