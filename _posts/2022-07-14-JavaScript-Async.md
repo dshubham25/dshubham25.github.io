@@ -3,7 +3,7 @@ layout: post
 title: JavaScript Async
 category: Programming Language
 excerpt: Guide on hosting a Jekyll site with custom domain on Github Pages.
-redirect_from: /2022/07/13/JavaScript Async/
+redirect_from: /2022/07/14/JavaScript Async/
 ---
 
 #### The Call Stack
