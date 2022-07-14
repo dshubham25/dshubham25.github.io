@@ -27,40 +27,38 @@ Then looking at this we can try to Recursive solution to create the remaining tr
 
 By that logic the right subtree will have 20 as root, 15 as the left child and 7 as the right child. and since left subtree has no value, it will give us the desired output.
 
-**Approach for C++**
-- Create a map to store the inorder indexes.
-- Call the function constructTree with all 7 parameters as shown above.
-- In the recursive function, first check the base case, if (preStart,>preEnd || inStart> inEnd) then return NULL.
-- Construct a node (say root) with the root value( first element of preorder). 
-- Find the index of the root, say elem from the hashmap.
-- Find the number of elements ( say nElem) in the left subtree  = elem – inStart
-- Call recursively for the left subtree with correct values (shown in the above table) and store the answer received in root->left.
-- Call recursively for the right subtree with correct values (shown in the above table) and store the answer received in root->right.
-- Return root
-
 
 **Code**
 ```C++:
-TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder){
-    map<int, int> inMap;
-    for(int i =0; i < inorder.size(); i++){
-        inMap[inorder[i]] = i;
+TreeNode* constructTree(int i,int j,int &ind,vector<int> &preorder,vector<int> &inorder,unordered_map<int,int> &mp)
+    {
+        if(i>j)
+        {
+            return NULL;
+        }
+        int rootVal=preorder[ind];
+        ind+=1;
+
+        TreeNode *root=new TreeNode(rootVal);
+        
+        int in=mp[rootVal];
+        root->left=constructTree(i,in-1,ind,preorder,inorder,mp);
+        root->right=constructTree(in+1,j,ind,preorder,inorder,mp);
+        return root;
     }
-    TreeNode* root = buildTree(preorder, 0, preorder.size()-1, inorder, 0, inorder.size()-1, inMap);
-
-    return root;
-}
-TreeNode* buildTree(vector<int>& preorder, int preStart, int preEnd, vector<int>& inorder, int inStart, int inEnd, map<int, int> inMap){
-    if(preStart > preEnd || inStart > inEnd) return NULL;
-    TreeNode* root = new TreeNode(preorder[preStart]);
-
-    int inRoot = inMap(root->val);
-    int numLeft = inRoot - inStart;
-    root->left = buildTree(preorder, preStart+1, preStart + numsLeft, inorder, inStart, inRoot-1, inMap);
-    root->right = buildTree(preorder, preStart+numsLeft+1, preEnd, inorder, inRoot+1, inEnd, inMap);
-
-    return root;
-}
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+     
+        unordered_map<int,int> mp;
+        
+        for(int i=0;i<inorder.size();i++)
+        {
+            mp[inorder[i]]=i;
+        }
+        int ind=0;
+        return constructTree(0,preorder.size()-1,ind,preorder,inorder,mp);
+        
+        
+    }
 ```
 
 ```python:
@@ -75,3 +73,5 @@ class Solution:
         return root
 
 ```
+
+**Time and Space Complexity** TC- O(N) and SC- O(N)
