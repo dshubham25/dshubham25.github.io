@@ -110,23 +110,15 @@ gets the chance to execute.
 ### Difference between Semaphore and Mutex
 
 | Basis for Comparison | Semaphore | Mutex |
-| ----------- | ----------- | ----------- |
+| ----------- | --------------------- | ---------------------- |
 | Basic | Semaphore is a signalling mechanism | Mutex is a locking mechanism|
 | Existence | Semaphore is an integer variable. | Mutex is an object. |
-| Function | Semaphore allow multiple program threads to access a finite instance of resources. | Mutex allow multiple program
-thread to access a single resource but not
-simultaneously. |
-| Ownership | Semaphore value can be changed by any process acquiring or releasing the resource. | Mutex object lock is released only by the process that has
-acquired the lock on it |
-| Categorize | Semaphore can be categorized into counting semaphore and binary
-semaphore | Mutex is not categorized
-further. |
-| Operation | Semaphore value is modified using wait() and signal() operation | Mutex object is locked or unlocked by the process
-requesting or releasing the resource. |
-| Resource Occupied | If all resources are being used, the process requesting for resource performs wait() operation and block
-itself till semaphore count become greater than one | If a mutex object is already
-locked, the process requesting for resources
-waits and queued by the system till lock is released. | 
+| Function | Semaphore allow multiple program threads to access a finite instance of resources. | Mutex allow multiple program thread to access a single resource but not simultaneously. |
+| Ownership | Semaphore value can be changed by any process acquiring or releasing the resource. | Mutex object lock is released only by the process that has acquired the lock on it |
+| Categorize | Semaphore can be categorized into counting semaphore and binary semaphore | Mutex is not categorized further. |
+| Operation | Semaphore value is modified using wait() and signal() operation | Mutex object is locked or unlocked by the process requesting or releasing the resource. |
+| Resource Occupied | If all resources are being used, the process requesting for resource performs wait() operation and block itself till semaphore count become greater than one | If a mutex object is already
+locked, the process requesting for resources waits and queued by the system till lock is released. | 
 
 ### fork and exec system calls ?
 
@@ -148,18 +140,16 @@ system call is executed, it is treated as by the hardware as software interrupt.
 ### Difference between preemptive and non preemptive scheduling ?
 
 | Parameters | Preemptive Scheduling | Non Premeptive Scheduling |
-| ----------- | ----------- | ----------- |
+| ----------- | --------------------- | ---------------------- |
 | Basic | In this resource(CPU Cycle) are allocated to a process for a limited time | Once resources(CPU Cycle) are allocated to a process, the process holds it till it completes its burst time or switches to waiting state.
 | Interrupt | Process can be interrupted in between. | Process can not be interrupted until it terminates itself or its time is up. |
-| Starvation | If a process having high
-priority frequently arrives in the ready queue, low priority processes may starve. | If a process with long burst time is running CPU, then later coming processes with less CPU burst time may starve. |
+| Starvation | If a process having high priority frequently arrives in the ready queue, low priority processes may starve. | If a process with long burst time is running CPU, then later coming processes with less CPU burst time may starve. |
 | Overhead | It has overheads of scheduling the processes. | It does not have overheads |
 | Flexibility | flexible | rigid |
 | Cost | Cost Associated | No cost associated | 
 | CPU Utilization | In preemptive
 scheduling, CPU utilization is high. | It is low |
-| Example |  Round Robin and Shortest Remaining Time First. | First Come First
-Serve and Shortest Job First. | 
+| Example |  Round Robin and Shortest Remaining Time First. | First Come First Serve and Shortest Job First. | 
 
 ### Mutual Exclusion
 
