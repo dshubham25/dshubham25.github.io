@@ -9,7 +9,7 @@ redirect_from: /2022/07/16/Openstack/
 Openstack is an open-source software that provides cloud-infrastructure for the virtual machines, bare metals and containers.
 
 <p>
-<img src="https://www.freecodecamp.org/news/content/images/2022/04/openstack.svg", align="center">
+<img src="https://www.freecodecamp.org/news/content/images/2022/04/openstack.svg" align="center">
 </p>
 
 Openstack is a cloud-computing platform that is used by the organisation to manage and control large scale deployements of virtual machines.
